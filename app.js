@@ -50,7 +50,7 @@ const sessionOptions={
 };
 
 app.get("/", (req, res) => {
-  res.send("Hi, I am root");
+    res.render("listings/home.ejs");
 });
 
 
@@ -74,9 +74,9 @@ app.use((req, res, next) => {
 });
 
 
-app.get("/", (req, res) => {
-    res.render("listings/home.ejs");
-});
+// app.get("/", (req, res) => {
+//     res.render("listings/home.ejs");
+// });
 
 
 app.use("/listings",listingRouter);
